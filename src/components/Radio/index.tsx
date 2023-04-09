@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Radio as MuiRadio, RadioProps as MuiRadioProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -8,4 +8,4 @@ const Radio = (props: RadioProps) => {
   return <MuiRadio {...props} />;
 };
 
-export default memo(Radio);
+export default Radio;

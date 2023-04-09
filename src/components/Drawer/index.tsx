@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Drawer as MuiDrawer, DrawerProps as MuiDrawerProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const Drawer = (props: DrawerProps) => {
   return <MuiDrawer {...other}>{children}</MuiDrawer>;
 };
 
-export default memo(Drawer);
+export default Drawer;

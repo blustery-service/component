@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { TableFooter as MuiTableFooter, TableFooterProps as MuiTableFooterProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const TableFooter = (props: TableFooterProps) => {
   return <MuiTableFooter {...other}>{children}</MuiTableFooter>;
 };
 
-export default memo(TableFooter);
+export default TableFooter;

@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Dialog as MuiDialog, DialogProps as MuiDialogProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const Dialog = (props: DialogProps) => {
   return <MuiDialog {...other}>{children}</MuiDialog>;
 };
 
-export default memo(Dialog);
+export default Dialog;

@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Tab as MuiTab, TabProps as MuiTabProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const Tab = (props: TabProps) => {
   return <MuiTab {...other}>{children}</MuiTab>;
 };
 
-export default memo(Tab);
+export default Tab;

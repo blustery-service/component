@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Container as MuiContainer, ContainerProps as MuiContainerProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const Container = (props: ContainerProps) => {
   return <MuiContainer {...other}>{children}</MuiContainer>;
 };
 
-export default memo(Container);
+export default Container;

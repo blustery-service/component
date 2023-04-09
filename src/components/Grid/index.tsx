@@ -1,6 +1,6 @@
 import Grid2 from '@mui/material/Unstable_Grid2';
 
-import React, { memo } from 'react';
+import React from 'react';
 import { GridProps as MuiGridProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -11,4 +11,4 @@ const Grid = (props: GridProps) => {
   return <Grid2 {...other}>{children}</Grid2>;
 };
 
-export default memo(Grid);
+export default Grid;

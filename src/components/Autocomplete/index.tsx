@@ -1,5 +1,5 @@
 import { ChipTypeMap, AutocompleteProps as MuiAutocompleteProps, Autocomplete as MuiAutocomplete } from '@mui/material';
-import React, { memo } from 'react';
+import React from 'react';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface AutocompleteProps<
@@ -19,4 +19,4 @@ function Autocomplete<
   return <MuiAutocomplete {...props} />;
 }
 
-export default memo(Autocomplete);
+export default Autocomplete;

@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { CardHeader as MuiCardHeader, CardHeaderProps as MuiCardHeaderProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const CardHeader = (props: CardHeaderProps) => {
   return <MuiCardHeader {...other}>{children}</MuiCardHeader>;
 };
 
-export default memo(CardHeader);
+export default CardHeader;

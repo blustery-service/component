@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Select as MuiSelect, SelectProps as MuiSelectProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const Select = (props: SelectProps) => {
   return <MuiSelect {...other}>{children}</MuiSelect>;
 };
 
-export default memo(Select);
+export default Select;

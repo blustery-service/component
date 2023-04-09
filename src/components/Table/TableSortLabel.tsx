@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { TableSortLabel as MuiTableSortLabel, TableSortLabelProps as MuiTableSortLabelProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const TableSortLabel = (props: TableSortLabelProps) => {
   return <MuiTableSortLabel {...other}>{children}</MuiTableSortLabel>;
 };
 
-export default memo(TableSortLabel);
+export default TableSortLabel;

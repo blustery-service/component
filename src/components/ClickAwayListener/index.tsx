@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import {
   ClickAwayListener as MuiClickAwayListener,
   ClickAwayListenerProps as MuiClickAwayListenerProps,
@@ -12,4 +12,4 @@ const ClickAwayListener = (props: ClickAwayListenerProps) => {
   return <MuiClickAwayListener {...other}>{children}</MuiClickAwayListener>;
 };
 
-export default memo(ClickAwayListener);
+export default ClickAwayListener;

@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Menu as MuiMenu, MenuProps as MuiMenuProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const Menu = (props: MenuProps) => {
   return <MuiMenu {...other}>{children}</MuiMenu>;
 };
 
-export default memo(Menu);
+export default Menu;

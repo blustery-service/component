@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Fab as MuiFab, FabProps as MuiFabProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const Fab = (props: FabProps) => {
   return <MuiFab {...other}>{children}</MuiFab>;
 };
 
-export default memo(Fab);
+export default Fab;

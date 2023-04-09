@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Link as MuiLink, LinkProps as MuiLinkProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const Link = (props: LinkProps) => {
   return <MuiLink {...other}>{children}</MuiLink>;
 };
 
-export default memo(Link);
+export default Link;

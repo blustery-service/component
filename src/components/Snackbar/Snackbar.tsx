@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Snackbar as MuiSnackbar, SnackbarProps as MuiSnackbarProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const Snackbar = (props: SnackbarProps) => {
   return <MuiSnackbar {...other}>{children}</MuiSnackbar>;
 };
 
-export default memo(Snackbar);
+export default Snackbar;

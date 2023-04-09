@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { ButtonGroupProps as MuiButtonGroupProps, ButtonGroup as MuiButtonGroup } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const ButtonGroup = (props: ButtonGroupProps) => {
   return <MuiButtonGroup {...other}>{children}</MuiButtonGroup>;
 };
 
-export default memo(ButtonGroup);
+export default ButtonGroup;

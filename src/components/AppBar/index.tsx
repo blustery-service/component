@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { AppBar as MuiAppBar, AppBarProps as MuiAppBarProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const AppBar = (props: AppBarProps) => {
   return <MuiAppBar {...other}>{children}</MuiAppBar>;
 };
 
-export default memo(AppBar);
+export default AppBar;

@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { TableBody as MuiTableBody, TableBodyProps as MuiTableBodyProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const TableBody = (props: TableBodyProps) => {
   return <MuiTableBody {...other}>{children}</MuiTableBody>;
 };
 
-export default memo(TableBody);
+export default TableBody;

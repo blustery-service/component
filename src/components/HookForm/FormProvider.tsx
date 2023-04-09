@@ -2,13 +2,13 @@
 import React, { ReactNode, memo } from 'react';
 import { FormProvider as Provider, UseFormReturn } from 'react-hook-form';
 
-interface FormProviderProps<T extends Record<string, any>> {
-  methods: UseFormReturn<T>;
+interface FormProviderProps {
+  methods: UseFormReturn<any>;
   onSubmit: () => void;
   children: ReactNode;
 }
 
-const FormProvider = <T extends Record<string, any>>({ methods, onSubmit, children }: FormProviderProps<T>) => {
+const FormProvider = ({ methods, onSubmit, children }: FormProviderProps) => {
   return (
     <Provider {...methods}>
       <form onSubmit={onSubmit} style={{ width: '100%' }}>
@@ -18,4 +18,4 @@ const FormProvider = <T extends Record<string, any>>({ methods, onSubmit, childr
   );
 };
 
-export default memo(FormProvider);
+export default FormProvider;

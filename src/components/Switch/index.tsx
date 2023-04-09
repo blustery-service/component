@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Switch as MuiSwitch, SwitchProps as MuiSwitchProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -8,4 +8,4 @@ const Switch = (props: SwitchProps) => {
   return <MuiSwitch {...props} />;
 };
 
-export default memo(Switch);
+export default Switch;

@@ -1,5 +1,5 @@
 import { ButtonProps as MuiButtonProps, Button as MuiButton } from '@mui/material';
-import React, { memo } from 'react';
+import React from 'react';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-empty-interface
 export interface IButtonProps extends MuiButtonProps {}
@@ -14,4 +14,4 @@ const Button = (props: IButtonProps) => {
   );
 };
 
-export default memo(Button);
+export default Button;

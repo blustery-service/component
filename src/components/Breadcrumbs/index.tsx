@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Breadcrumbs as MuiBreadcrumbs, BreadcrumbsProps as MuiBreadcrumbsProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const Breadcrumbs = (props: BreadcrumbsProps) => {
   return <MuiBreadcrumbs {...other}>{children}</MuiBreadcrumbs>;
 };
 
-export default memo(Breadcrumbs);
+export default Breadcrumbs;

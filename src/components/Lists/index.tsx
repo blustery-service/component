@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { List as MuiList, ListProps as MuiListProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const List = (props: ListProps) => {
   return <MuiList {...other}>{children}</MuiList>;
 };
 
-export default memo(List);
+export default List;
