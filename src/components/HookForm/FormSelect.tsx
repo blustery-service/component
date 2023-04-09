@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode, memo } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 import TextField, { TextFieldProps } from '../TextField';
 
@@ -7,7 +7,7 @@ export type FormSelectProps = {
   children: ReactNode;
 } & TextFieldProps;
 
-export default function FormSelect({ name, children, ...other }: FormSelectProps) {
+const FormSelect = ({ name, children, ...other }: FormSelectProps) => {
   const { control } = useFormContext();
 
   return (
@@ -32,4 +32,6 @@ export default function FormSelect({ name, children, ...other }: FormSelectProps
       )}
     />
   );
-}
+};
+
+export default memo(FormSelect);

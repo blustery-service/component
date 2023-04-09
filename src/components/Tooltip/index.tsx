@@ -1,9 +1,7 @@
 import React, { memo } from 'react';
-import {
-  Tooltip as MuiTooltip,
-  TooltipProps as MuiTooltipProps,
-} from '@mui/material';
+import { Tooltip as MuiTooltip, TooltipProps as MuiTooltipProps } from '@mui/material';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface TooltipProps extends MuiTooltipProps {}
 
 const Tooltip = (props: TooltipProps) => {

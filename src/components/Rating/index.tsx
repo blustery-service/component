@@ -1,9 +1,7 @@
 import React, { memo } from 'react';
-import {
-  Rating as MuiRating,
-  RatingProps as MuiRatingProps,
-} from '@mui/material';
+import { Rating as MuiRating, RatingProps as MuiRatingProps } from '@mui/material';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface RatingProps extends MuiRatingProps {}
 
 const Rating = (props: RatingProps) => {

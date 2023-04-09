@@ -1,9 +1,7 @@
 import React, { memo } from 'react';
-import {
-  Drawer as MuiDrawer,
-  DrawerProps as MuiDrawerProps,
-} from '@mui/material';
+import { Drawer as MuiDrawer, DrawerProps as MuiDrawerProps } from '@mui/material';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface DrawerProps extends MuiDrawerProps {}
 
 const Drawer = (props: DrawerProps) => {

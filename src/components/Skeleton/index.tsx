@@ -1,9 +1,7 @@
 import React, { memo } from 'react';
-import {
-  Skeleton as MuiSkeleton,
-  SkeletonProps as MuiSkeletonProps,
-} from '@mui/material';
+import { Skeleton as MuiSkeleton, SkeletonProps as MuiSkeletonProps } from '@mui/material';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface SkeletonProps extends MuiSkeletonProps {}
 
 const Skeleton = (props: SkeletonProps) => {

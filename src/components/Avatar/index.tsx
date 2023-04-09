@@ -1,9 +1,7 @@
 import React, { memo } from 'react';
-import {
-  Avatar as MuiAvatar,
-  AvatarProps as MuiAvatarProps,
-} from '@mui/material';
+import { Avatar as MuiAvatar, AvatarProps as MuiAvatarProps } from '@mui/material';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface AvatarProps extends MuiAvatarProps {}
 
 const Avatar = (props: AvatarProps) => {

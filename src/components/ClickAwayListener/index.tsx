@@ -4,6 +4,7 @@ import {
   ClickAwayListenerProps as MuiClickAwayListenerProps,
 } from '@mui/material';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface ClickAwayListenerProps extends MuiClickAwayListenerProps {}
 
 const ClickAwayListener = (props: ClickAwayListenerProps) => {

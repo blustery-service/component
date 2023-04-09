@@ -4,6 +4,7 @@ import {
   ToggleButtonGroupProps as MuiToggleButtonGroupProps,
 } from '@mui/material';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface ToggleButtonGroupProps extends MuiToggleButtonGroupProps {}
 
 const ToggleButtonGroup = (props: ToggleButtonGroupProps) => {

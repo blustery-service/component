@@ -1,9 +1,7 @@
 import React, { memo } from 'react';
-import {
-  Backdrop as MuiBackdrop,
-  BackdropProps as MuiBackdropProps,
-} from '@mui/material';
+import { Backdrop as MuiBackdrop, BackdropProps as MuiBackdropProps } from '@mui/material';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface BackdropProps extends MuiBackdropProps {}
 
 const Backdrop = (props: BackdropProps) => {

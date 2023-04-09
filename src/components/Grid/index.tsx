@@ -3,6 +3,7 @@ import Grid2 from '@mui/material/Unstable_Grid2';
 import React, { memo } from 'react';
 import { GridProps as MuiGridProps } from '@mui/material';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface GridProps extends MuiGridProps {}
 
 const Grid = (props: GridProps) => {

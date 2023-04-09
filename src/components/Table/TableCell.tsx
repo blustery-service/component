@@ -1,9 +1,7 @@
 import React, { memo } from 'react';
-import {
-  TableCell as MuiTableCell,
-  TableCellProps as MuiTableCellProps,
-} from '@mui/material';
+import { TableCell as MuiTableCell, TableCellProps as MuiTableCellProps } from '@mui/material';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface TableCellProps extends MuiTableCellProps {}
 
 const TableCell = (props: TableCellProps) => {

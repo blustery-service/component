@@ -1,9 +1,7 @@
 import React, { memo } from 'react';
-import {
-  CardActions as MuiCardActions,
-  CardActionsProps as MuiCardActionsProps,
-} from '@mui/material';
+import { CardActions as MuiCardActions, CardActionsProps as MuiCardActionsProps } from '@mui/material';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface CardActionsProps extends MuiCardActionsProps {}
 
 const CardActions = (props: CardActionsProps) => {

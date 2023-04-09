@@ -1,9 +1,7 @@
 import React, { memo } from 'react';
-import {
-  TablePagination as MuiTablePagination,
-  TablePaginationProps as MuiTablePaginationProps,
-} from '@mui/material';
+import { TablePagination as MuiTablePagination, TablePaginationProps as MuiTablePaginationProps } from '@mui/material';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export type TablePaginationProps = MuiTablePaginationProps;
 
 const TablePagination = (props: TablePaginationProps) => {

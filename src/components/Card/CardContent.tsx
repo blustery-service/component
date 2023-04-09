@@ -1,9 +1,7 @@
 import React, { memo } from 'react';
-import {
-  CardContent as MuiCardContent,
-  CardContentProps as MuiCardContentProps,
-} from '@mui/material';
+import { CardContent as MuiCardContent, CardContentProps as MuiCardContentProps } from '@mui/material';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface CardContentProps extends MuiCardContentProps {}
 
 const CardContent = (props: CardContentProps) => {

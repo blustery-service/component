@@ -1,9 +1,7 @@
 import React, { memo } from 'react';
-import {
-  ButtonGroupProps as MuiButtonGroupProps,
-  ButtonGroup as MuiButtonGroup,
-} from '@mui/material';
+import { ButtonGroupProps as MuiButtonGroupProps, ButtonGroup as MuiButtonGroup } from '@mui/material';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface ButtonGroupProps extends MuiButtonGroupProps {}
 
 const ButtonGroup = (props: ButtonGroupProps) => {

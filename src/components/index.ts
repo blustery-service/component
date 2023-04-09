@@ -128,3 +128,6 @@ export { default as Typography } from './Typography';
 export * from './Typography';
 
 export * from './HookForm';
+
+export { default as Icon } from './Icon';
+export * from './Icon';
