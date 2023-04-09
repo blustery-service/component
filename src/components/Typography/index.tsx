@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Typography as MuiTypography, TypographyProps as MuiTypographyProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const Typography = (props: TypographyProps) => {
   return <MuiTypography {...other}>{children}</MuiTypography>;
 };
 
-export default memo(Typography);
+export default Typography;

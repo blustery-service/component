@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Alert as MuiAlert, AlertProps as MuiAlertProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const Alert = (props: AlertProps) => {
   return <MuiAlert {...other}>{children}</MuiAlert>;
 };
 
-export default memo(Alert);
+export default Alert;

@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import {
   ToggleButtonGroup as MuiToggleButtonGroup,
   ToggleButtonGroupProps as MuiToggleButtonGroupProps,
@@ -12,4 +12,4 @@ const ToggleButtonGroup = (props: ToggleButtonGroupProps) => {
   return <MuiToggleButtonGroup {...other}>{children}</MuiToggleButtonGroup>;
 };
 
-export default memo(ToggleButtonGroup);
+export default ToggleButtonGroup;

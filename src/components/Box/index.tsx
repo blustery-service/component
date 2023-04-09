@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Box as MuiBox, BoxProps as MuiBoxProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const Box = (props: BoxProps) => {
   return <MuiBox {...other}>{children}</MuiBox>;
 };
 
-export default memo(Box);
+export default Box;

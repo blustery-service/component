@@ -34,4 +34,4 @@ const FormSelect = ({ name, children, ...other }: FormSelectProps) => {
   );
 };
 
-export default memo(FormSelect);
+export default FormSelect;

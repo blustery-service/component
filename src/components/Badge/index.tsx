@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Badge as MuiBadge, BadgeProps as MuiBadgeProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const Badge = (props: BadgeProps) => {
   return <MuiBadge {...other}>{children}</MuiBadge>;
 };
 
-export default memo(Badge);
+export default Badge;

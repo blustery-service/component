@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Collapse as MuiCollapse, CollapseProps as MuiCollapseProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const Collapse = (props: CollapseProps) => {
   return <MuiCollapse {...other}>{children}</MuiCollapse>;
 };
 
-export default memo(Collapse);
+export default Collapse;

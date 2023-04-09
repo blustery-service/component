@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { CardActions as MuiCardActions, CardActionsProps as MuiCardActionsProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const CardActions = (props: CardActionsProps) => {
   return <MuiCardActions {...other}>{children}</MuiCardActions>;
 };
 
-export default memo(CardActions);
+export default CardActions;

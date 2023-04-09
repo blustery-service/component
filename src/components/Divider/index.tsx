@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Divider as MuiDivider, DividerProps as MuiDividerProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -8,4 +8,4 @@ const Divider = (props: DividerProps) => {
   return <MuiDivider {...props} />;
 };
 
-export default memo(Divider);
+export default Divider;

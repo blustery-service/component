@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Popover as MuiPopover, PopoverProps as MuiPopoverProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const Popover = (props: PopoverProps) => {
   return <MuiPopover {...other}>{children}</MuiPopover>;
 };
 
-export default memo(Popover);
+export default Popover;

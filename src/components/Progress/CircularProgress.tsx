@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import {
   CircularProgress as MuiCircularProgress,
   CircularProgressProps as MuiCircularProgressProps,
@@ -11,4 +11,4 @@ const CircularProgress = (props: CircularProgressProps) => {
   return <MuiCircularProgress {...props} />;
 };
 
-export default memo(CircularProgress);
+export default CircularProgress;

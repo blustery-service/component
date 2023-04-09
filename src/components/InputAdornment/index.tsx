@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { InputAdornment as MuiInputAdornment, InputAdornmentProps as MuiInputAdornmentProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const InputAdornment = (props: InputAdornmentProps) => {
   return <MuiInputAdornment {...other}>{children}</MuiInputAdornment>;
 };
 
-export default memo(InputAdornment);
+export default InputAdornment;

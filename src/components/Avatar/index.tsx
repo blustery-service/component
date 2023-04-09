@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Avatar as MuiAvatar, AvatarProps as MuiAvatarProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const Avatar = (props: AvatarProps) => {
   return <MuiAvatar {...other}>{children}</MuiAvatar>;
 };
 
-export default memo(Avatar);
+export default Avatar;

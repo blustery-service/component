@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Checkbox as MuiCheckBox, CheckboxProps as MuiCheckBoxProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -8,4 +8,4 @@ const CheckBox = (props: CheckBoxProps) => {
   return <MuiCheckBox {...props} />;
 };
 
-export default memo(CheckBox);
+export default CheckBox;

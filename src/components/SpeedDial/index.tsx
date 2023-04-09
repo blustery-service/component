@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { SpeedDial as MuiSpeedDial, SpeedDialProps as MuiSpeedDialProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const SpeedDial = (props: SpeedDialProps) => {
   return <MuiSpeedDial {...other}>{children}</MuiSpeedDial>;
 };
 
-export default memo(SpeedDial);
+export default SpeedDial;

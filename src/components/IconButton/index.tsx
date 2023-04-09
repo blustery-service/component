@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { IconButton as MuiIconButton, IconButtonProps as MuiIconButtonProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const IconButton = (props: IconButtonProps) => {
   return <MuiIconButton {...other}>{children}</MuiIconButton>;
 };
 
-export default memo(IconButton);
+export default IconButton;

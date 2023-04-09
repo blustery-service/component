@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { ToggleButton as MuiToggleButton, ToggleButtonProps as MuiToggleButtonProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -8,4 +8,4 @@ const ToggleButton = (props: ToggleButtonProps) => {
   return <MuiToggleButton {...props} />;
 };
 
-export default memo(ToggleButton);
+export default ToggleButton;

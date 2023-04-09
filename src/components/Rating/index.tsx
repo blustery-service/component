@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Rating as MuiRating, RatingProps as MuiRatingProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -8,4 +8,4 @@ const Rating = (props: RatingProps) => {
   return <Rating {...props} />;
 };
 
-export default memo(Rating);
+export default Rating;

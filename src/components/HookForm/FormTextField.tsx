@@ -66,4 +66,4 @@ const FromTextField = ({
   );
 };
 
-export default memo(FromTextField);
+export default FromTextField;

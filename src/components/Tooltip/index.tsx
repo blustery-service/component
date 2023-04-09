@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Tooltip as MuiTooltip, TooltipProps as MuiTooltipProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const Tooltip = (props: TooltipProps) => {
   return <MuiTooltip {...other}>{children}</MuiTooltip>;
 };
 
-export default memo(Tooltip);
+export default Tooltip;

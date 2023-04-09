@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Toolbar as MuiToolbar, ToolbarProps as MuiToolbarProps } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,4 +9,4 @@ const Toolbar = (props: ToolbarProps) => {
   return <MuiToolbar {...other}>{children}</MuiToolbar>;
 };
 
-export default memo(Toolbar);
+export default Toolbar;

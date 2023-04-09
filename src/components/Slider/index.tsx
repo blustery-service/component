@@ -9,4 +9,4 @@ const Slider = (props: SliderProps) => {
   return <MuiSlider {...props} />;
 };
 
-export default memo(Slider);
+export default Slider;
