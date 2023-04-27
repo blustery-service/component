@@ -1,18 +1,19 @@
 import { isArray, isEmpty } from 'lodash';
 import { Rules } from '../types/validate-from';
+import { format } from './format-string';
 
 export const string = {
-  length: (name: string, length: number) => `${name} must be exactly ${length} characters`,
-  min: (name: string, min: number) => `${name} must be at least ${min} characters`,
-  max: (name: string, max: number) => `${name} must be at most ${max} characters`,
-  matches: (name: string) => `${name} must match the following: ""`,
-  email: (name: string) => `${name} must be a valid email`,
-  url: (name: string) => `${name} must be a valid URL`,
-  uuid: (name: string) => `${name} must be a valid UUID`,
-  trim: (name: string) => `${name} must be a trimmed string`,
-  lowercase: (name: string) => `${name} must be a lowercase string`,
-  uppercase: (name: string) => `${name} must be a upper case string`,
-  required: (name: string) => `${name} is a required field`,
+  length: '{0} must be exactly {1} characters',
+  min: '{0} must be at least {1} characters',
+  max: '{0} must be at most {1} characters',
+  matches: '{0} must match the following: ""',
+  email: '{0} must be a valid email',
+  url: '{0} must be a valid URL',
+  uuid: '{0} must be a valid UUID',
+  trim: '{0} must be a trimmed string',
+  lowercase: '{0} must be a lowercase string',
+  uppercase: '{0} must be a upper case string',
+  required: '{0} is a required field',
 };
 
 export function validateMail<T = unknown>(name: string, value: T, rules?: Rules['email']) {
@@ -31,7 +32,7 @@ export function validateMail<T = unknown>(name: string, value: T, rules?: Rules[
     const isEmail = emailRegex.test(value as string);
     return {
       isVerify: isEmail,
-      message: !isEmail ? string.email(name) : '',
+      message: !isEmail ? format(string.email, name) : '',
     };
   } else if (!rules?.validate) {
     return { isVerify: true, message: '' };
@@ -39,7 +40,7 @@ export function validateMail<T = unknown>(name: string, value: T, rules?: Rules[
     if (!isArray(value)) {
       return {
         isVerify: false,
-        message: rules?.message || string.email(name),
+        message: rules?.message || format(string.email, name),
       };
     } else {
       const isValid = value.every((item) => {
@@ -49,14 +50,14 @@ export function validateMail<T = unknown>(name: string, value: T, rules?: Rules[
 
       return {
         isVerify: isValid,
-        message: !isValid ? rules?.message || string.email(name) : '',
+        message: !isValid ? rules?.message || format(string.email, name) : '',
       };
     }
   } else {
     const isEmail = emailRegex.test(value as string);
     return {
       isVerify: isEmail,
-      message: !isEmail ? rules?.message || string.email(name) : '',
+      message: !isEmail ? rules?.message || format(string.email, name) : '',
     };
   }
 }
@@ -68,14 +69,14 @@ export function validateRequired<T = unknown>(name: string, value: T, rules: Rul
 
   if (typeof rules === 'boolean') {
     const isMatch = !isEmpty(value);
-    return { isVerify: isMatch, message: !isMatch ? string.required(name) : '' };
+    return { isVerify: isMatch, message: !isMatch ? format(string.required, name) : '' };
   } else if (!rules?.validate) {
     return { isVerify: true, message: '' };
   } else if (rules.isArray) {
     if (!isArray(value)) {
       return {
         isVerify: false,
-        message: rules?.message || string.required(name),
+        message: rules?.message || format(string.required, name),
       };
     } else {
       const isValid = value.every((item) => {
@@ -85,12 +86,12 @@ export function validateRequired<T = unknown>(name: string, value: T, rules: Rul
 
       return {
         isVerify: isValid,
-        message: !isValid ? rules?.message || string.required(name) : '',
+        message: !isValid ? rules?.message || format(string.required, name) : '',
       };
     }
   } else {
     const isMatch = isEmpty(value);
-    return { isVerify: isMatch, message: !isMatch ? rules?.message || string.required(name) : '' };
+    return { isVerify: isMatch, message: !isMatch ? rules?.message || format(string.required, name) : '' };
   }
 }
 
@@ -105,7 +106,7 @@ export function validateMin<T = unknown>(name: string, value: T, rules: Rules['m
     const isMin = (value as string).length >= rules;
     return {
       isVerify: isMin,
-      message: !isMin ? string.min(name, rules) : '',
+      message: !isMin ? format(string.min, name, rules.toString()) : '',
     };
   } else if (!rules?.validate) {
     return { isVerify: true, message: '' };
@@ -113,7 +114,7 @@ export function validateMin<T = unknown>(name: string, value: T, rules: Rules['m
     if (!isArray(value)) {
       return {
         isVerify: false,
-        message: rules?.message || string.min(name, rules.number),
+        message: rules?.message || format(string.min, name, rules.number.toString()),
       };
     } else {
       const isValid = value.every((item) => {
@@ -123,14 +124,14 @@ export function validateMin<T = unknown>(name: string, value: T, rules: Rules['m
 
       return {
         isVerify: isValid,
-        message: !isValid ? rules?.message || string.min(name, rules.number) : '',
+        message: !isValid ? rules?.message || format(string.min, name, rules.number.toString()) : '',
       };
     }
   } else {
     const isMin = (value as string).length >= rules.number;
     return {
       isVerify: isMin,
-      message: !isMin ? rules?.message || string.min(name, rules.number) : '',
+      message: !isMin ? rules?.message || format(string.min, name, rules.number.toString()) : '',
     };
   }
 }
@@ -147,7 +148,7 @@ export function validateMax<T = unknown>(name: string, value: T, rules: Rules['m
     const isMax = (value as string).length <= rules;
     return {
       isVerify: isMax,
-      message: !isMax ? string.max(name, rules) : '',
+      message: !isMax ? format(string.max, name, rules.toString()) : '',
     };
   } else if (!rules?.validate) {
     return { isVerify: true, message: '' };
@@ -155,7 +156,7 @@ export function validateMax<T = unknown>(name: string, value: T, rules: Rules['m
     if (!isArray(value)) {
       return {
         isVerify: false,
-        message: rules?.message || string.max(name, rules.number),
+        message: rules?.message || format(string.max, name, rules.number.toString()),
       };
     } else {
       const isValid = value.every((item) => {
@@ -165,14 +166,14 @@ export function validateMax<T = unknown>(name: string, value: T, rules: Rules['m
 
       return {
         isVerify: isValid,
-        message: !isValid ? rules?.message || string.max(name, rules.number) : '',
+        message: !isValid ? rules?.message || format(string.max, name, rules.number.toString()) : '',
       };
     }
   } else {
     const isMax = (value as string).length <= rules?.number;
     return {
       isVerify: isMax,
-      message: isMax ? rules?.message || string.min(name, rules?.number) : '',
+      message: isMax ? rules?.message || format(string.max, name, rules.number.toString()) : '',
     };
   }
 }
@@ -189,7 +190,7 @@ export function validateLength<T = unknown>(name: string, value: T, rules: Rules
     const isLength = (value as string).length === rules;
     return {
       isVerify: isLength,
-      message: !isLength ? string.length(name, rules) : '',
+      message: !isLength ? format(string.length, name, rules.toString()) : '',
     };
   } else if (!rules?.validate) {
     return { isVerify: true, message: '' };
@@ -197,7 +198,7 @@ export function validateLength<T = unknown>(name: string, value: T, rules: Rules
     if (!isArray(value)) {
       return {
         isVerify: false,
-        message: rules?.message || string.length(name, rules.number),
+        message: rules?.message || format(string.length, name, rules.number.toString()),
       };
     } else {
       const isValid = value.every((item) => {
@@ -207,14 +208,14 @@ export function validateLength<T = unknown>(name: string, value: T, rules: Rules
 
       return {
         isVerify: isValid,
-        message: !isValid ? rules?.message || string.length(name, rules.number) : '',
+        message: !isValid ? rules?.message || format(string.length, name, rules.number.toString()) : '',
       };
     }
   } else {
     const isLength = (value as string).length === rules?.number;
     return {
       isVerify: isLength,
-      message: !isLength ? rules?.message || string.length(name, rules?.number) : '',
+      message: !isLength ? rules?.message || format(string.length, name, rules.number.toString()) : '',
     };
   }
 }
@@ -230,7 +231,7 @@ export function validateMatches<T = unknown>(name: string, value: T, rules: Rule
   const isMatches = rules.test(value as string);
   return {
     isVerify: isMatches,
-    message: !isMatches ? string.matches(name) : '',
+    message: !isMatches ? format(string.matches, name) : '',
   };
 }
 
